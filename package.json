@@ -1,0 +1,27 @@
+{
+  "name": "iconic-call-dashboard",
+  "version": "2.0.0",
+  "description": "In-house real-time sales war room dashboard for ICONIC by AI",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "cd client && npx vite",
+    "build": "cd client && npx vite build",
+    "start": "node server/index.js",
+    "db:init": "node server/db/init.js",
+    "db:seed": "node server/db/init.js --seed"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "sql.js": "^1.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "nodemon": "^3.1.0"
+  }
+}
